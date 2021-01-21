@@ -1,0 +1,39 @@
+{
+  "name": "placeholder",
+  "version": "0.0.1",
+  "description": "Stencil Component Starter",
+  "main": "dist/index.cjs.js",
+  "module": "dist/custom-elements/index.js",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/custom-elements/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/placeholder/placeholder.esm.js",
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "scripts": {
+    "build": "stencil build",
+    "dev": "stencil build --dev --watch --port 3333 --serve",
+    "generate": "stencil generate"
+  },
+  "dependencies": {
+    "@stencil/core": "^2.0.1"
+  },
+  "license": "MIT",
+  "contributors": [
+    "Phuoc Nguyen <me@phuoc.ng>"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/phuoc-ng/placeholder.git"
+  },
+  "bugs": {
+    "url": "https://github.com/phuoc-ng/placeholder/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}
