@@ -1,4 +1,4 @@
-import { Component, Element, Host, State, h } from '@stencil/core';
+import { Component, Element, Host, Prop, State, h } from '@stencil/core';
 
 interface Rect {
   top: number;
@@ -13,6 +13,7 @@ interface Rect {
 })
 export class PlaceholderText {
   @Element() private element: HTMLElement;
+  @Prop() fillColor?: string = 'rgba(0, 0, 0, .2)';
   @State() width: number;
   @State() height: number;
   @State() rects: Rect[] = [];
@@ -82,7 +83,7 @@ export class PlaceholderText {
                     y={rect.top}
                     rx={2}
                     ry={2}
-                    fill='rgba(0, 0, 0, .2)'
+                    fill={this.fillColor}
                   />
                 ))}
               </svg>

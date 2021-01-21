@@ -7,6 +7,7 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface PlaceholderText {
+        "fillColor"?: string;
     }
 }
 declare global {
@@ -22,6 +23,7 @@ declare global {
 }
 declare namespace LocalJSX {
     interface PlaceholderText {
+        "fillColor"?: string;
     }
     interface IntrinsicElements {
         "placeholder-text": PlaceholderText;
