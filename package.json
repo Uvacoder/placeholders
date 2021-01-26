@@ -1,7 +1,7 @@
 {
   "name": "@placeholders/core",
   "version": "0.0.1",
-  "description": "Web components to replace content with placeholders",
+  "description": "Custom placeholders in web components. Can be used with popular JavaScript frameworks or HTML tags",
   "homepage": "https://placeholders.xyz",
   "keywords": [
     "web component",

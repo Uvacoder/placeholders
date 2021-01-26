@@ -1,11 +1,21 @@
 # Placeholder
 
-Web components to replace content with placeholder.
+Custom placeholders in web components. Can be used with popular JavaScript frameworks or HTML tags.
 
-For example, placing a paragraph inside a `<placeholder-text>` tag
+## Usage
+
+Insert the following script tag to your page:
 
 ``` html
-<placeholder-text>Lorem ipsum dolor sit amet ...</placeholder-text>
+<script type="module" src="https://unpkg.com/@placeholders/core@0.0.1/dist/esm/placeholders.js"></script>
+```
+
+Then you can use `<placeholder-xxx>` tags. For example:
+
+``` html
+<placeholder-text>
+    Lorem ipsum dolor sit amet ...
+</placeholder-text>
 ```
 
 will turn each text into a rectangle with the same size as following:
@@ -33,6 +43,10 @@ $ npm run dev
 ```
 
 Open http://localhost:3333 in your browser to see it in action.
+
+## Contributing
+
+PRs, suggestions are welcome!
 
 ## About
 
