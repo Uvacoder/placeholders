@@ -13,8 +13,7 @@ interface Rect {
 })
 export class PlaceholderText {
   @Element() private element: HTMLElement;
-  
-  @Prop() itemColor?: string = 'rgba(0, 0, 0, .2)';
+
   @Prop() itemHeight?: number;
 
   @State() width: number;
@@ -69,11 +68,7 @@ export class PlaceholderText {
 
   render() {
     return (
-      <Host
-        style={{
-          color: 'transparent',
-        }}
-      >
+      <Host>
         <slot></slot>
         {
           this.rects.length > 0 && (
@@ -86,7 +81,7 @@ export class PlaceholderText {
                     y={rect.top}
                     rx={2}
                     ry={2}
-                    fill={this.itemColor}
+                    fill='currentColor'
                   />
                 ))}
               </svg>
