@@ -13,7 +13,10 @@ interface Rect {
 })
 export class PlaceholderText {
   @Element() private element: HTMLElement;
-  @Prop() fillColor?: string = 'rgba(0, 0, 0, .2)';
+  
+  @Prop() itemColor?: string = 'rgba(0, 0, 0, .2)';
+  @Prop() itemHeight?: number;
+
   @State() width: number;
   @State() height: number;
   @State() rects: Rect[] = [];
@@ -54,7 +57,7 @@ export class PlaceholderText {
       return {
         top: textRect.top - rect.top,
         left: textRect.left - rect.left,
-        height: textRect.height,
+        height: this.itemHeight || textRect.height,
         width: textRect.width,
       };
     });
@@ -83,7 +86,7 @@ export class PlaceholderText {
                     y={rect.top}
                     rx={2}
                     ry={2}
-                    fill={this.fillColor}
+                    fill={this.itemColor}
                   />
                 ))}
               </svg>
