@@ -6,11 +6,21 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface PlaceholderImage {
+        "height": number;
+        "width": number;
+    }
     interface PlaceholderText {
         "itemHeight"?: number;
     }
 }
 declare global {
+    interface HTMLPlaceholderImageElement extends Components.PlaceholderImage, HTMLStencilElement {
+    }
+    var HTMLPlaceholderImageElement: {
+        prototype: HTMLPlaceholderImageElement;
+        new (): HTMLPlaceholderImageElement;
+    };
     interface HTMLPlaceholderTextElement extends Components.PlaceholderText, HTMLStencilElement {
     }
     var HTMLPlaceholderTextElement: {
@@ -18,14 +28,20 @@ declare global {
         new (): HTMLPlaceholderTextElement;
     };
     interface HTMLElementTagNameMap {
+        "placeholder-image": HTMLPlaceholderImageElement;
         "placeholder-text": HTMLPlaceholderTextElement;
     }
 }
 declare namespace LocalJSX {
+    interface PlaceholderImage {
+        "height"?: number;
+        "width"?: number;
+    }
     interface PlaceholderText {
         "itemHeight"?: number;
     }
     interface IntrinsicElements {
+        "placeholder-image": PlaceholderImage;
         "placeholder-text": PlaceholderText;
     }
 }
@@ -33,6 +49,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "placeholder-image": LocalJSX.PlaceholderImage & JSXBase.HTMLAttributes<HTMLPlaceholderImageElement>;
             "placeholder-text": LocalJSX.PlaceholderText & JSXBase.HTMLAttributes<HTMLPlaceholderTextElement>;
         }
     }
