@@ -12,15 +12,10 @@ Insert the following script tag to your page:
 
 Then you can use `<placeholder-xxx>` tags. For example:
 
-``` html
-<placeholder-text>
-    Lorem ipsum dolor sit amet ...
-</placeholder-text>
-```
-
-will turn each text into a rectangle with the same size as following:
-
-![Text placeholder](assets/text-placeholder.png)
+| Tag                                                                   | Output                                                |
+|-----------------------------------------------------------------------|-------------------------------------------------------|
+| `<placeholder-image width="400" height="200">`                        | ![Image placeholder](assets/placeholder-image.png)    |
+| `<placeholder-text>Lorem ipsum dolor sit amet ...</placeholder-text>` | ![Text placeholder](assets/placeholder-text.png)      |
 
 ## Local development
 
