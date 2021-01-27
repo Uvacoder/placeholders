@@ -7,6 +7,7 @@ import { Component, Prop, h } from '@stencil/core';
 export class PlaceholderImage {
   @Prop() width: number;
   @Prop() height: number;
+  @Prop() text?: string;
 
   calculateFontSize() {
     return Math.floor(Math.min(this.width, this.height) * 0.2);
@@ -30,7 +31,7 @@ export class PlaceholderImage {
           x='50%'
           y='50%'
         >
-          {`${this.width} x ${this.height}`}
+          {this.text || `${this.width} x ${this.height}`}
         </text>
       </svg>
     );

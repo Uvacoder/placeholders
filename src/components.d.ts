@@ -8,6 +8,7 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface PlaceholderImage {
         "height": number;
+        "text"?: string;
         "width": number;
     }
     interface PlaceholderText {
@@ -35,6 +36,7 @@ declare global {
 declare namespace LocalJSX {
     interface PlaceholderImage {
         "height"?: number;
+        "text"?: string;
         "width"?: number;
     }
     interface PlaceholderText {
