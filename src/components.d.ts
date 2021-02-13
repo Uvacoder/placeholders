@@ -13,6 +13,9 @@ export namespace Components {
         "text"?: string;
         "width": number;
     }
+    interface PlaceholderLines {
+        "size": number;
+    }
     interface PlaceholderText {
         "itemHeight"?: number;
     }
@@ -24,6 +27,12 @@ declare global {
         prototype: HTMLPlaceholderImageElement;
         new (): HTMLPlaceholderImageElement;
     };
+    interface HTMLPlaceholderLinesElement extends Components.PlaceholderLines, HTMLStencilElement {
+    }
+    var HTMLPlaceholderLinesElement: {
+        prototype: HTMLPlaceholderLinesElement;
+        new (): HTMLPlaceholderLinesElement;
+    };
     interface HTMLPlaceholderTextElement extends Components.PlaceholderText, HTMLStencilElement {
     }
     var HTMLPlaceholderTextElement: {
@@ -32,6 +41,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "placeholder-image": HTMLPlaceholderImageElement;
+        "placeholder-lines": HTMLPlaceholderLinesElement;
         "placeholder-text": HTMLPlaceholderTextElement;
     }
 }
@@ -43,11 +53,15 @@ declare namespace LocalJSX {
         "text"?: string;
         "width"?: number;
     }
+    interface PlaceholderLines {
+        "size"?: number;
+    }
     interface PlaceholderText {
         "itemHeight"?: number;
     }
     interface IntrinsicElements {
         "placeholder-image": PlaceholderImage;
+        "placeholder-lines": PlaceholderLines;
         "placeholder-text": PlaceholderText;
     }
 }
@@ -56,6 +70,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "placeholder-image": LocalJSX.PlaceholderImage & JSXBase.HTMLAttributes<HTMLPlaceholderImageElement>;
+            "placeholder-lines": LocalJSX.PlaceholderLines & JSXBase.HTMLAttributes<HTMLPlaceholderLinesElement>;
             "placeholder-text": LocalJSX.PlaceholderText & JSXBase.HTMLAttributes<HTMLPlaceholderTextElement>;
         }
     }
