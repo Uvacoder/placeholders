@@ -1,6 +1,6 @@
 {
   "name": "@placeholders/core",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Custom placeholders in web components. Can be used with popular JavaScript frameworks or HTML tags",
   "homepage": "https://placeholders.xyz",
   "keywords": [
@@ -17,8 +17,7 @@
   "collection:main": "dist/collection/index.js",
   "unpkg": "dist/placeholder/placeholder.esm.js",
   "files": [
-    "dist/",
-    "loader/"
+    "dist/"
   ],
   "scripts": {
     "build": "stencil build",
@@ -26,7 +25,7 @@
     "generate": "stencil generate"
   },
   "dependencies": {
-    "@stencil/core": "^2.0.1"
+    "@stencil/core": "^2.4.0"
   },
   "license": "MIT",
   "contributors": [
