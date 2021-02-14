@@ -79,8 +79,8 @@ export class PlaceholderText {
                                 width={rect.width}
                                 x={rect.left}
                                 y={rect.top}
-                                rx={2}
-                                ry={2}
+                                rx={4}
+                                ry={4}
                                 fill='currentColor'
                             />
                         ))}
