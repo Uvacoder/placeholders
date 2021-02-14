@@ -76,8 +76,8 @@ export class PlaceholderLines {
                             width={`${random(20, 100)}%`}
                             x={0}
                             y={i * (this.ITEM_HEIGHT + this.ITEM_SPACING)}
-                            rx={2}
-                            ry={2}
+                            rx={4}
+                            ry={4}
                             fill='currentColor'
                         />
                     ))
