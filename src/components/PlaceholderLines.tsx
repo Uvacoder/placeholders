@@ -42,7 +42,7 @@ declare var ResizeObserver: {
 export class PlaceholderLines {
     @Element() private element: HTMLElement;
     @Prop() size: number;
-    @State() width: number = 300;
+    @State() width?: number;
 
     private ITEM_HEIGHT = 8;
     private ITEM_SPACING = 8;
@@ -68,21 +68,25 @@ export class PlaceholderLines {
 
         return (
             <Host style={{ display: 'block', width: '100%' }}>
-                <svg viewBox={`0 0 ${this.width} ${height}`} height={height}>
                 {
-                    Array(this.size).fill(0).map((_, i) => (
-                        <rect
-                            height={this.ITEM_HEIGHT}
-                            width={`${random(20, 100)}%`}
-                            x={0}
-                            y={i * (this.ITEM_HEIGHT + this.ITEM_SPACING)}
-                            rx={4}
-                            ry={4}
-                            fill='currentColor'
-                        />
-                    ))
+                    this.width && (
+                        <svg viewBox={`0 0 ${this.width} ${height}`} height={height}>
+                        {
+                            Array(this.size).fill(0).map((_, i) => (
+                                <rect
+                                    height={this.ITEM_HEIGHT}
+                                    width={`${random(20, 100)}%`}
+                                    x={0}
+                                    y={i * (this.ITEM_HEIGHT + this.ITEM_SPACING)}
+                                    rx={4}
+                                    ry={4}
+                                    fill='currentColor'
+                                />
+                            ))
+                        }
+                        </svg>
+                    )
                 }
-                </svg>
             </Host>
         );
     }

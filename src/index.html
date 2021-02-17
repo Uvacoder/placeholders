@@ -15,6 +15,34 @@ placeholder-text {
 section {
     margin: 2em 0;
 }
+.table {
+    border: 1px solid rgba(0, 0, 0, .3);
+    display: table;
+    width: 100%;
+}
+.row {
+    border: 1px solid rgba(0, 0, 0, .3);
+    display: table-row;
+}
+.row:nth-of-type(odd) {
+    background: #F9FAFB;
+}
+.cell {
+    display: table-cell;
+    padding: 0.5em;
+}
+.cell:nth-of-type(1) {
+    color: #9CA3AF;
+}
+.cell:nth-of-type(2) {
+    color: #F87171;
+}
+.cell:nth-of-type(3) {
+    color: #FBBF24;
+}
+.cell:nth-of-type(4) {
+    color: #34D399;
+}
 </style>
 </head>
 <body>
@@ -38,6 +66,41 @@ section {
 
     <section>
         <placeholder-lines size="10" style="color: rgba(0, 0, 0, .2)"></placeholder-lines>
+    </section>
+
+    <section>
+        <div class="table">
+            <div class="row header">
+                <div class="cell">1</div>
+                <div class="cell">2</div>
+                <div class="cell">3</div>
+                <div class="cell">4</div>
+            </div>
+            <div class="row">
+                <div class="cell" data-label="1"><placeholder-lines size="2" /></div>
+                <div class="cell" data-label="2"><placeholder-lines size="2" /></div>
+                <div class="cell" data-label="3"><placeholder-lines size="2" /></div>
+                <div class="cell" data-label="4"><placeholder-lines size="2" /></div>
+            </div>
+            <div class="row">
+                <div class="cell" data-label="1"><placeholder-lines size="8" /></div>
+                <div class="cell" data-label="2"><placeholder-lines size="8" /></div>
+                <div class="cell" data-label="3"><placeholder-lines size="8" /></div>
+                <div class="cell" data-label="4"><placeholder-lines size="8" /></div>
+            </div>
+            <div class="row">
+                <div class="cell" data-label="1"><placeholder-lines size="4" /></div>
+                <div class="cell" data-label="2"><placeholder-lines size="4" /></div>
+                <div class="cell" data-label="3"><placeholder-lines size="4" /></div>
+                <div class="cell" data-label="4"><placeholder-lines size="4" /></div>
+            </div>
+            <div class="row">
+                <div class="cell" data-label="1"><placeholder-lines size="6" /></div>
+                <div class="cell" data-label="2"><placeholder-lines size="6" /></div>
+                <div class="cell" data-label="3"><placeholder-lines size="6" /></div>
+                <div class="cell" data-label="4"><placeholder-lines size="6" /></div>
+            </div>
+        </div>
     </section>
 </body>
 </html>
