@@ -7,7 +7,7 @@ Custom placeholders in web components. Can be used with popular JavaScript frame
 Insert the following script tag to your page:
 
 ``` html
-<script type="module" src="https://unpkg.com/@placeholders/core@0.0.3/dist/esm/placeholders.js"></script>
+<script type="module" src="https://unpkg.com/@placeholders/core@0.0.4/dist/esm/placeholders.js"></script>
 ```
 
 Then you can use `<placeholder-xxx>` tags. For example:
